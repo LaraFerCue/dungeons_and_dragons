@@ -4,6 +4,7 @@
 \usepackage{wrapfig}
 \usepackage{tabularx}
 \usepackage[table]{xcolor}
+\usepackage{multirow}
 
 \newcommand{\proficiency}[2]
 {
@@ -28,17 +29,20 @@
 	
 	\begin{table*}
 		\small
-		\rowcolors{1}{white}{lightgray}
+		\rowcolors{1}{lightgray}{white}
 		\hrule
-		\begin{tabularx}{\textwidth}{|l p{30pt} p{180pt} p{30pt} X X X X X|
-			}
-			Level & Prof. Bonus & Features & Spell Known & \multicolumn{5}{c|}{-- Spell Slots / Spell Level --} \\
+		\begin{tabularx}{\textwidth}{|l p{30pt} p{180pt} p{30pt} X X X X X|}
+			\hiderowcolors
+			 & Prof. & & Spell & \multicolumn{5}{c|}{-- Spell Slots / Spell Level --} \\
+			Level & Bonus & Features & Known & 1st & 2nd & 3rd & 4th & 5th \\
+			
+			\showrowcolors
 			1st & +2 & Favored Enemy, Divine Hunter & - & - & - & - & - &- \\
 			2nd & +2 & Fighting Style, Spell Casting & 2 & 2 & - & - &- &- \\
 			3rd & +2 & Monster Slayer Archetype, Primeval Awareness & 3 & 3 & - & - &- &- \\
 			4th & +2 & Ability Score Improvement & 3 & 3 & - & - &- &- \\
 			5th & +3 & Extra Attack & 4 & 4 & 2 & - & - & - \\
-			6th & +3 & Favored Enemy and Divine Hunter Improvement & 4 & 4 & 3 & - & - & - \\
+			6th & +3 & Favored Enemy and Divine Hunter Improvement & 4 & 4 & 2 & - & - & - \\
 			7th & +3 & Monster Slayer Archetype feature & 5 & 4 & 3  & - & - & - \\
 			8th & +3 & Ability Score Improvement & 5 & 4 & 3  & - & - & - \\
 			9th & +4 & Slayer of Magic Wielders & 6 & 4 & 3 & 2 & - & - \\
@@ -82,5 +86,133 @@
 		\item a longbow and a quiver of 20 arrows.
 		\item a holy symbol.
 	\end{itemize}
+	\subsection*{Favored Enemy}
+	Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy. \\ \\
+	Choose a type of favored enemy: aberrations, celestials, dragons, elementals, fey, fiends, giants, monstrosities, oozes, or undead.
+	You have advantage on Wisdom (Survival) checks to track your favored enemies, as well as on Intelligence checks to recall information about them.
+	When you gain this feature, you also learn one language of your choice that is spoken by your favored enemies, if they speak one at all. \\ \\
+	You choose one additional favored enemy, as well as an associated language, at 6th and 14th level. As you gain levels, your choices should reflect the types of monsters you have encountered on your adventures.
 	
+	\subsection*{Divine Hunter}
+	Beginning at 1st level, you have significant training in dealing with unnatural creatures and your god has provided you the means to deal efficiently with them. \\ \\
+	You can spend an hour to make a short pray to your god and infuse your attacks with divine energy. Until your next short rest your weapon attacks cause an additional 1d4 points of radiant damage. \\ \\
+	The damage you cause is increased to 1d6 at level 6th, and 2d4 at level 10th.
+	
+	\subsection*{Fighting Style}
+	At 2nd level, you adopt a particular style of fighting as your specialty. Choose one of the following options. \\
+	You can’t take a Fighting Style option more than once, even if you later get to choose again.
+	
+	\subsubsection*{Archery}
+	You gain a +2 bonus to attack rolls you make with ranged weapons.
+	\subsubsection*{Defense}
+	While you are wearing armor, you gain a +1 bonus to AC.
+	\subsubsection*{Dueling}
+	When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.
+	\subsubsection*{Two-Weapon Fighting}
+	When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack.
+	
+	\subsection*{Spellcasting}
+	By the time you reach 2nd level, you have learned to use your divine connection to cast spells, much as a paladin or a cleric does. See chapter 10 for the general rules of spellcasting and at the end of this document for the monster slayer spell list.
+	\subsubsection*{Spell Slots}
+	The monster slayer table shows how many spell slots you have to cast your monster slayer spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell’s level or higher. You regain all expended spell slots when you finish a long rest. \\
+	For example, if you know the 1st-level spell heroism and have a 1st-level and a
+	2nd-level spell slot available, you can cast heroism using either slot. \\
+	Spells Known of 1st Level and Higher You know two 1st-level spells of your choice
+	from the monster slayer spell list. \\
+	The Spells Known column of the monster slayer table shows when you learn more monster slayer spells of your choice. Each of these spells must be of a	level for which you have spell slots. For instance, when you reach 5th level in this class, you can learn one new spell of 1st or 2nd level. \\
+	Additionally, when you gain a level in this class, you can choose one of the witcher spells you know and replace it with another spell from the monster slayer spell list, which also must be of a level for which you have spell slots.
+	\subsubsection*{Spellcasting Ability}
+	Wisdom is your spellcasting ability for your monster slayer spells, since your magic draws on your attunement to divine. You use your Wisdom whenever a spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a monster slayer spell you cast and when making an attack roll with one. \\
+	\\
+	Spell save DC = 8 + your proficiency bonus + your Wisdom modifier \\
+	\\
+	Spell attack modifier = your proficiency bonus + your Wisdom modifier \\
+	
+	\subsection*{Primeval Awareness}
+	Beginning at 3rd level, you can use your action and expend one monster slayer spell slot to focus your awareness on the region around you. For 1 minute per level of the spell slot you expend, you can sense whether the following types of
+	creatures are present within 1 mile of you: aberrations, celestials, dragons,
+	elementals, fey, fiends, and undead. \\
+	This feature doesn’t reveal the creatures’ location or number. 
+	
+	\subsection*{Ability Score Improvement}
+	When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. \\
+	As normal, you can’t increase an ability score above 20 using this feature.
+	
+	\subsection*{Extra Attack}
+	Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.
+	
+	\subsection*{Slayer of Magic Wielders}
+	Beginning at 9th level, you have practiced techniques useful to quickly slay spellcasters, gaining the following benefits:
+	\begin{itemize}
+		\item  When a creature that you can see attempts to cast a spell, you can use your reaction to make a weapon attack against that creature.
+		\item When you damage a creature that is concentrating on a spell, that creature has disadvantage on the saving throw it makes to maintain its concentation.
+		\item You have advantage on saving throws against charming, posesion or 	domination spells from creatures that you can perceive.
+	\end{itemize}
+	
+	\subsection*{Vanish}
+	Starting at 14th level, you can use the Hide action as a bonus action on your turn. Also, you can’t be tracked by nonmagical means, unless you choose to leave a trail.
+	
+	\subsection*{Feral Senses}
+	At 18th level, you gain preternatural senses that help you fight creatures you can’t see. When you attack a creature you can’t see, your inability to see it doesn’t impose disadvantage on your attack rolls against it. \\
+	You are also aware of the location of any invisible creature within 30 feet of you, provided that the creature isn’t hidden from you and you aren’t blinded or deafened.
+	
+	\subsection*{Foe Slayer}
+	At 20th level, you become an unparalleled unter of your enemies. Once on each of your turns, you can add your Wisdom modifier to the attack roll or the damage roll of an attack you make against one of your favored enemies. You can choose to use this feature before or after the roll, but before any effects of the roll are	applied.
+	
+	\section*{Monster Slayer Archetype}
+	The monster slayer usually is proficient against a given type of creature, gaining spells and features helpfull to finish this creatures.
+	
+	%% The slayer should have feats matching the following types:
+	%% Lvl 3: Attack (2 spells lvl1)
+	%% Lvl 7: Defense (2 spells lvl2)
+	%% Lvl 11: Superior Attack (2 spells lvl3)
+	%% Lvl 15: Superior Defense (2 spells lvl4)
+	\subsection*{Vampire Slayer}
+	%% The vampire slayer should take advantage of the vampire feats.
+	The path of the Vampire Slayer means pledging to destroy all undead creatures. As you walk the Vampire Slayer's path, you learn specialized techniques for fighting the threads you face, from rampaging mummies and legions of skeletons to slaughtering liches and vampires.
+	
+	\subsubsection*{Vampire Slayer Spells}
+	\begin{tabular}{ll}
+		3rd & \textit{Guiding Bolt, Shield of Faith} \\
+		7th & \textit{Magical Weapon, Branding Smite} \\
+		11th & \textit{Daylight, Spirit Guardians} \\
+		15th & \textit{Guardian of Faith, Stoneskin} \\
+	\end{tabular}
+
+	\subsubsection*{Undead Slayer}
+	At 3rd level, you gain one of the following features of your choice.
+	
+	\textbf{Horde Breaker.} Once on each of your turns when you make a weapon attack, you can make another attack with the same weapon against a different target that is within 5 feet of the original target and within the range of your weapon.
+	
+	\textbf{Undead Killer.} When an undead creature within 5 feet of you hits or misses you with a weapon attack, you can use your reaction to attack that creature immediately after its attack, provided that you can see the creature.
+	
+	\textbf{Necromancer slayer.} Your vow to end the necromancy in this world makes you a deadly fighter. When you hit an undead creature with a weapon attack, the creature takes an extra 1d8 damage. You can deal this extra damage only once per turn.
+	
+	\subsubsection*{Defensive Tactics}
+	At 7th level, you gain one of the following features of your choice.
+	
+	\textbf{Escape the Horde.} Opportunity attacks against you are made with disadvantage.
+	
+	\textbf{Multiattack Defense.} When a creature hits you with an attack, you gain a +4 bonus to AC against all subsequent attacks made by that creature for the rest of the turn.
+	
+	\textbf{Steel Will.} You have advantage on saving throws against being frightened.
+	
+	\subsubsection*{Holy Warrior}
+	At 11th level, you gain one of the following features of your choise.
+	
+	\textbf{Holy Vow.} You can use your bonus action to cast a spell.
+	
+	\textbf{Divine Guidance.} All your attacks against undead are done with advantage.
+	
+	\subsubsection*{Enemy of unholy magic}
+	At 15th level, you gain one of the following features of your choice.
+	
+	\textbf{Ban magic.} You can use your reaction to use one of your spell slots and cast \textit{Counterspell} at that level.
+	
+	\textbf{Divine reflexes.} You have advantage on saving throws against spells and other magical effects.
+	
+	\subsection*{Giant Slayer}
+	\subsubsection*{Giant Slayer Spells}
+	\subsection*{Dragon Slayer}
+	\subsection*{Demon Slayer}
 \end{document}
