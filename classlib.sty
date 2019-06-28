@@ -1,0 +1,41 @@
+\ProvidesPackage{classlib}[2019/06/28 Class Library for D\&D 5th Edition]
+
+
+\newcommand{\proficiency}[2]
+{
+	\textbf{#1:} #2. \\
+}
+
+\newcommand{\classtableheader}{
+	\hiderowcolors
+	& Prof. & & Spell & \multicolumn{5}{c|}{-- Spell Slots / Spell Level --} \\
+	Level & Bonus & Features & Known & 1st & 2nd & 3rd & 4th & 5th \\	
+	\showrowcolors
+}
+\newenvironment{classtable}
+{
+	\small
+	\rowcolors{1}{lightgray}{white}
+	\hrule
+	\tabularx{\textwidth}{|l p{30pt} p{180pt} p{30pt} X X X X X|}
+	\classtableheader
+	
+}{
+	\endtabularx
+	\hrule
+}
+
+
+\newcommand{\sectiontitle}{}
+\newcommand{\archetype}[1]
+{
+	\subsection*{#1}
+	\renewcommand{\sectiontitle}{#1}
+}
+
+\newenvironment{archetypespells}
+{
+	\subsubsection*{\sectiontitle{} Spells}
+	\begin{tabular}{ll}
+}
+{\end{tabular}}

@@ -5,44 +5,7 @@
 \usepackage{tabularx}
 \usepackage[table]{xcolor}
 \usepackage{multirow}
-
-\newcommand{\proficiency}[2]
-{
-	\textbf{#1:} #2. \\
-}
-
-\newcommand{\classtableheader}{
-	\hiderowcolors
-	& Prof. & & Spell & \multicolumn{5}{c|}{-- Spell Slots / Spell Level --} \\
-	Level & Bonus & Features & Known & 1st & 2nd & 3rd & 4th & 5th \\	
-	\showrowcolors
-}
-\newenvironment{classtable}
-{
-		\small
-		\rowcolors{1}{lightgray}{white}
-		\hrule
-		\tabularx{\textwidth}{|l p{30pt} p{180pt} p{30pt} X X X X X|}
-		\classtableheader
-			
-}{
-\endtabularx
-\hrule
-}
-
-\newcommand{\sectiontitle}{}
-\newcommand{\archetype}[1]
-{
-	\subsection*{#1}
-	\renewcommand{\sectiontitle}{#1}
-}
-
-\newenvironment{archetypespells}
-{
-	\subsubsection*{\sectiontitle{} Spells}
-	\begin{tabular}{ll}
-}
-{\end{tabular}}
+\usepackage{classlib}
 
 \title{Monster Slayer}
 \author{}
@@ -191,51 +154,15 @@
 	%% Lvl 7: Defense (2 spells lvl2)
 	%% Lvl 11: Superior Attack (2 spells lvl3)
 	%% Lvl 15: Superior Defense (2 spells lvl4)
-	\archetype{Vampire Slayer}
-	%% The vampire slayer should take advantage of the vampire feats.
-	The path of the Vampire Slayer means pledging to destroy all undead creatures. As you walk the Vampire Slayer's path, you learn specialized techniques for fighting the threads you face, from rampaging mummies and legions of skeletons to slaughtering liches and vampires.
+	\input{vampireslayer}
 	
+	\archetype{Giant Slayer}
 	\begin{archetypespells}
-		3rd & \textit{Guiding Bolt, Shield of Faith} \\
-		7th & \textit{Magical Weapon, Branding Smite} \\
-		11th & \textit{Daylight, Spirit Guardians} \\
-		15th & \textit{Guardian of Faith, Stoneskin} \\
+		3rd & \textit{} \\
+		7th & \textit{} \\
+		11th & \textit{}\\
+		15th & \textit{}\\
 	\end{archetypespells}
-
-	\subsubsection*{Undead Slayer}
-	At 3rd level, you gain one of the following features of your choice.
-	
-	\textbf{Horde Breaker.} Once on each of your turns when you make a weapon attack, you can make another attack with the same weapon against a different target that is within 5 feet of the original target and within the range of your weapon.
-	
-	\textbf{Undead Killer.} When an undead creature within 5 feet of you hits or misses you with a weapon attack, you can use your reaction to attack that creature immediately after its attack, provided that you can see the creature.
-	
-	\textbf{Necromancer slayer.} Your vow to end the necromancy in this world makes you a deadly fighter. When you hit an undead creature with a weapon attack, the creature takes an extra 1d8 damage. You can deal this extra damage only once per turn.
-	
-	\subsubsection*{Defensive Tactics}
-	At 7th level, you gain one of the following features of your choice.
-	
-	\textbf{Escape the Horde.} Opportunity attacks against you are made with disadvantage.
-	
-	\textbf{Multiattack Defense.} When a creature hits you with an attack, you gain a +4 bonus to AC against all subsequent attacks made by that creature for the rest of the turn.
-	
-	\textbf{Steel Will.} You have advantage on saving throws against being frightened.
-	
-	\subsubsection*{Holy Warrior}
-	At 11th level, you gain one of the following features of your choise.
-	
-	\textbf{Holy Vow.} You can use your bonus action to cast a spell.
-	
-	\textbf{Divine Guidance.} All your attacks against undead are done with advantage.
-	
-	\subsubsection*{Enemy of unholy magic}
-	At 15th level, you gain one of the following features of your choice.
-	
-	\textbf{Ban magic.} You can use your reaction to use one of your spell slots and cast \textit{Counterspell} at that level.
-	
-	\textbf{Divine reflexes.} You have advantage on saving throws against spells and other magical effects.
-	
-	\subsection*{Giant Slayer}
-	\subsubsection*{Giant Slayer Spells}
 	\subsection*{Dragon Slayer}
 	\subsection*{Demon Slayer}
 \end{document}
