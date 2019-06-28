@@ -1,4 +1,4 @@
-\documentclass[11pt,a4paper,twocolumn, sans]{article}
+\documentclass[11pt,a4paper,twocolumn]{article}
 \usepackage{bibcheck}
 \usepackage{graphicx}
 \usepackage{wrapfig}
@@ -10,6 +10,39 @@
 {
 	\textbf{#1:} #2. \\
 }
+
+\newcommand{\classtableheader}{
+	\hiderowcolors
+	& Prof. & & Spell & \multicolumn{5}{c|}{-- Spell Slots / Spell Level --} \\
+	Level & Bonus & Features & Known & 1st & 2nd & 3rd & 4th & 5th \\	
+	\showrowcolors
+}
+\newenvironment{classtable}
+{
+		\small
+		\rowcolors{1}{lightgray}{white}
+		\hrule
+		\tabularx{\textwidth}{|l p{30pt} p{180pt} p{30pt} X X X X X|}
+		\classtableheader
+			
+}{
+\endtabularx
+\hrule
+}
+
+\newcommand{\sectiontitle}{}
+\newcommand{\archetype}[1]
+{
+	\subsection*{#1}
+	\renewcommand{\sectiontitle}{#1}
+}
+
+\newenvironment{archetypespells}
+{
+	\subsubsection*{\sectiontitle{} Spells}
+	\begin{tabular}{ll}
+}
+{\end{tabular}}
 
 \title{Monster Slayer}
 \author{}
@@ -28,15 +61,7 @@
 	You can make a monster slayer quickly by following these suggestions. First, make Dexterity your highest score, followed by Wisdom. (Some witchers who focus on two-weapon fighting make Strength higher than Dexterity.) Second, choose the soldier background.
 	
 	\begin{table*}
-		\small
-		\rowcolors{1}{lightgray}{white}
-		\hrule
-		\begin{tabularx}{\textwidth}{|l p{30pt} p{180pt} p{30pt} X X X X X|}
-			\hiderowcolors
-			 & Prof. & & Spell & \multicolumn{5}{c|}{-- Spell Slots / Spell Level --} \\
-			Level & Bonus & Features & Known & 1st & 2nd & 3rd & 4th & 5th \\
-			
-			\showrowcolors
+		\begin{classtable}
 			1st & +2 & Favored Enemy, Divine Hunter & - & - & - & - & - &- \\
 			2nd & +2 & Fighting Style, Spell Casting & 2 & 2 & - & - &- &- \\
 			3rd & +2 & Monster Slayer Archetype, Primeval Awareness & 3 & 3 & - & - &- &- \\
@@ -57,8 +82,7 @@
 			18th & +6 & Feral Senses & 10 & 4 & 3 & 3 & 3 & 1 \\
 			19th & +6 & Ability Score Improvement & 11 & 4 & 3 & 3 & 3 & 2 \\
 			20th & +6 & Foe Slayer & 11 & 4 & 3 & 3 & 3 & 2 \\
-		\end{tabularx}
-		\hrule
+		\end{classtable}
 	\end{table*}
 	\section*{Class Features}
 	As a monster slayer, you gain the following class features.
@@ -167,17 +191,16 @@
 	%% Lvl 7: Defense (2 spells lvl2)
 	%% Lvl 11: Superior Attack (2 spells lvl3)
 	%% Lvl 15: Superior Defense (2 spells lvl4)
-	\subsection*{Vampire Slayer}
+	\archetype{Vampire Slayer}
 	%% The vampire slayer should take advantage of the vampire feats.
 	The path of the Vampire Slayer means pledging to destroy all undead creatures. As you walk the Vampire Slayer's path, you learn specialized techniques for fighting the threads you face, from rampaging mummies and legions of skeletons to slaughtering liches and vampires.
 	
-	\subsubsection*{Vampire Slayer Spells}
-	\begin{tabular}{ll}
+	\begin{archetypespells}
 		3rd & \textit{Guiding Bolt, Shield of Faith} \\
 		7th & \textit{Magical Weapon, Branding Smite} \\
 		11th & \textit{Daylight, Spirit Guardians} \\
 		15th & \textit{Guardian of Faith, Stoneskin} \\
-	\end{tabular}
+	\end{archetypespells}
 
 	\subsubsection*{Undead Slayer}
 	At 3rd level, you gain one of the following features of your choice.
